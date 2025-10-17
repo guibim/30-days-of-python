@@ -1,10 +1,10 @@
 #Lists #Tuples #Sets #Dictionaries
 
-list = list()
+my_list = list()
 empty_list = list() 
 print(len(empty_list))
 
-list = []
+my_list = []
 empty_list = []
 print(len(empty_list))
 
@@ -34,7 +34,7 @@ print('Mixed List:', lst2)
 #index use
 first_fruit = fruits[1]
 print('First fruit:', first_fruit)
-second_fruit = fruiits[2]
+second_fruit = fruits[2]
 print('Second fruit:', second_fruit)
 
 #Last index
@@ -50,7 +50,7 @@ print('Last fruit using negative index:', last_fruit)
 
 #unpacking list
 lst3 = ['Item 1', 'Item 2', 'Item 3', 'Item 4', 'Item 5']
-first_item, second_item, third_item = lst3
+first_item, second_item, third_item, *rest = lst3
 print('First Item:', first_item)
 print('Second Item:', second_item)
 print('Third Item:', third_item)
@@ -103,4 +103,106 @@ fruits = ['banana', 'orange', 'mango', 'lemon']
 fruits.append('apple')
 print(fruits)           
 fruits.append('lime')   
+print(fruits)
+
+#Remove items from a list
+fruits = ['banana', 'orange', 'mango', 'lemon', 'lime']
+fruits.remove('banana')
+print(fruits)
+fruits.remove('lime')
+print(fruits)
+
+#using pop()
+fruits = ['banana', 'orange', 'mango', 'lemon', 'lime']
+fruits.pop()
+print(fruits)
+fruits.pop(0)
+print(fruits)
+
+#Remove using del
+fruits = ['banana', 'orange', 'mango', 'lemon', 'lime']
+del fruits[0]
+print(fruits)
+del fruits[1]
+print(fruits)
+
+#Clearing a list
+fruits = ['banana', 'orange', 'mango', 'lemon', 'lime']
+fruits.clear()
+print(fruits)
+
+#copy list
+fruits = ['banana', 'orange', 'mango', 'lemon', 'lime']
+fruits_copy = fruits.copy()
+print(fruits_copy)
+
+
+#joining lists
+lst3 = list1 = lst2
+
+positive_numbers = [1, 2, 3, 4, 5]
+zero = [0]
+negative_numbers = [-1, -2, -3, -4, -5]
+integers = positive_numbers + zero + negative_numbers
+print(integers)
+
+
+#extend()
+list1 = ['item 1', 'item 2', 'item 3']
+list2 = ['item 4', 'item 5', 'item 6']
+list1.extend(list2)
+
+num1 = [1, 2, 3]
+num2 = [4, 5, 6]
+num1.extend(num2)
+print('Numbers:', num1)
+negative_numbers = [-1, -2, -3, -4, -5]
+positive_numbers = [1, 2, 3, 4, 5]
+zero = [0]
+
+negative_numbers.extend(zero)
+negative_numbers.extend(positive_numbers)
+print('integers', negative_numbers)
+
+
+#counting items
+
+fruits = ['banana', 'orange', 'mango', 'lemon']
+print(fruits.count('orange'))
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+print(ages.count(24))
+
+#Find index of an item
+fruits = ['banana', 'orange', 'mango', 'lemon']
+print(fruits.index('orange'))
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+print(ages.index(24))
+
+#reverse list 
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.reverse()
+print(fruits)
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+ages.reverse()
+print(ages)
+
+#sorting list
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits.sort()
+print(fruits)
+fruits.sort(reverse=True)
+print(fruits)
+ages = [22, 19, 24, 25, 26, 24, 25, 24]
+ages.sort()
+print(ages)
+
+ages.sort(reverse=True)
+print(ages)
+
+#sorted
+fruits = ['banana', 'orange', 'mango', 'lemon']
+print(sorted(fruits))
+#reversed
+fruits = ['banana', 'orange', 'mango', 'lemon']
+fruits = sorted(fruits,reverse = True)
 print(fruits)
