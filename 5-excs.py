@@ -65,3 +65,27 @@ front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
 back_end = ['Node','Express', 'MongoDB']
 list_join = front_end + back_end
 print(list_join)
+
+#27
+full_stack = list_join.copy()
+full_stack.insert(front_end.index('Redux') + 1, 'Python')
+full_stack.insert(front_end.index('Redux') + 2, 'SQL')
+print(full_stack)
+
+
+#excs 2
+ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
+ages.sort()
+print('Sorted ages:', ages)
+min_age = ages[0]
+max_age = ages[-1]
+print('Min age:', min_age, 'Max age:', max_age)
+ages.append(min_age)
+ages.append(max_age)
+ages_median = (ages[len(ages)//2] + ages[(len(ages)-1)//2]) / 2
+print('Median age:', ages_median)
+ages_avg = sum(ages) / len(ages)
+print('Average age:', ages_avg)
+age_range = max_age - min_age
+print('Age range:', age_range)
+print(abs(min_age - ages_avg), abs(max_age - ages_avg))
